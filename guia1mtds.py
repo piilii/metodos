@@ -100,15 +100,25 @@ def arrxarr(a1, a2):
 import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.linspace(0,10,20)
+#x = np.linspace(0,10,20)
 
-fig, ax = plt.subplots(figsize=(5, 2.7), layout="constrained")
-ax.plot(x, x)
-ax.plot(x, 3-(1/2)*x)
-ax.plot(x, np.ones_like(x)*2)
+#fig, ax = plt.subplots(figsize=(5, 2.7), layout="constrained")
+#ax.plot(x, x)
+#ax.plot(x, 3-(1/2)*x)
+#ax.plot(x, np.ones_like(x)*2)
 
-plt.xlabel('x')
-plt.ylabel('y')
-plt.title('ejercicio 6')
-plt.show()
+#7
+def graficador(b, v):
+    x = np.linspace(0,10,20)
+    fig, ax = plt.subplots(figsize=(5, 2.7), layout="constrained")
+
+    ax.plot(x, (3/2)*x - b/2)
+    ax.plot(x, (3/2)*x - v/4)
+
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.title('ejercicio 6')
+    plt.show()
+
+print(graficador(1, 1))
 
